@@ -57,13 +57,3 @@ extension BBRootViewController {
         }
     }
 }
-
-class TabBarViewModel: ObservableObject {
-    @Published var selectedIndex: Int = 0
-    
-    func select(index: Int) {
-        selectedIndex = index
-        objectWillChange.send()
-        print("select is called")
-    }
-}
