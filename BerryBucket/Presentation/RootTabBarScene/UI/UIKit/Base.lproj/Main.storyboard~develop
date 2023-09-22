@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZKL-rP-pee">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="QFN-Gx-gpB">
+            <objects>
+                <viewController id="tcT-OY-Fys" customClass="MyViewController" customModule="BerryBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L1Q-a0-Rzl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="705"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3Wx-YT-XUY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1dm-Bb-SW2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqZ-mf-KMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="-1157"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="lHz-JR-B4g">
+            <objects>
+                <viewController id="ZKL-rP-pee" customClass="BBRootViewController" customModule="BerryBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aE8-9O-KtG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uF-8U-bIe">
+                                <rect key="frame" x="0.0" y="59" width="393" height="705"/>
+                                <connections>
+                                    <segue destination="yMO-B7-11W" kind="embed" identifier="HomeTabBarSegue" id="iKf-Lz-QY8"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugv-bT-fot">
+                                <rect key="frame" x="0.0" y="764" width="393" height="54"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="TIa-YZ-3tQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBq-aS-xga">
+                                <rect key="frame" x="0.0" y="818" width="393" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iPz-WY-V8m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aBq-aS-xga" secondAttribute="bottom" id="1eN-3x-Cu0"/>
+                            <constraint firstItem="Ugv-bT-fot" firstAttribute="leading" secondItem="iPz-WY-V8m" secondAttribute="leading" id="2cb-KP-Vn8"/>
+                            <constraint firstItem="iPz-WY-V8m" firstAttribute="trailing" secondItem="2uF-8U-bIe" secondAttribute="trailing" id="40I-hv-hEo"/>
+                            <constraint firstItem="2uF-8U-bIe" firstAttribute="top" secondItem="iPz-WY-V8m" secondAttribute="top" id="EQE-Nx-7eh"/>
+                            <constraint firstItem="aBq-aS-xga" firstAttribute="top" secondItem="iPz-WY-V8m" secondAttribute="bottom" id="MYj-nW-zNL"/>
+                            <constraint firstItem="2uF-8U-bIe" firstAttribute="leading" secondItem="iPz-WY-V8m" secondAttribute="leading" id="VA4-s4-F3L"/>
+                            <constraint firstItem="iPz-WY-V8m" firstAttribute="bottom" secondItem="Ugv-bT-fot" secondAttribute="bottom" id="Zvd-I3-BrI"/>
+                            <constraint firstItem="iPz-WY-V8m" firstAttribute="trailing" secondItem="Ugv-bT-fot" secondAttribute="trailing" id="fP2-Fm-Fij"/>
+                            <constraint firstItem="iPz-WY-V8m" firstAttribute="bottom" secondItem="Ugv-bT-fot" secondAttribute="bottom" id="g7Z-iR-GYu"/>
+                            <constraint firstItem="aBq-aS-xga" firstAttribute="leading" secondItem="aE8-9O-KtG" secondAttribute="leading" id="gP0-ye-I9x"/>
+                            <constraint firstItem="Ugv-bT-fot" firstAttribute="top" secondItem="2uF-8U-bIe" secondAttribute="bottom" id="kZV-qU-Vvl"/>
+                            <constraint firstAttribute="trailing" secondItem="aBq-aS-xga" secondAttribute="trailing" id="qBf-6Z-tek"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomHombarView" destination="aBq-aS-xga" id="Z15-aC-m3E"/>
+                        <outlet property="homeTabBarController" destination="2uF-8U-bIe" id="fJe-TE-jcz"/>
+                        <outlet property="tabBarView" destination="Ugv-bT-fot" id="tKZ-1x-w3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ah0-Ih-7PI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.473282442748086" y="-431.69014084507046"/>
+        </scene>
+        <!--Home Tab Bar Controller-->
+        <scene sceneID="d8A-XJ-irz">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yMO-B7-11W" customClass="BBHomeTabBarController" customModule="BerryBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J3E-Jh-wsj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tcT-OY-Fys" kind="relationship" relationship="viewControllers" id="Z9Z-ea-S3f"/>
+                        <segue destination="eal-UT-FNW" kind="relationship" relationship="viewControllers" id="emy-Nd-dA1"/>
+                        <segue destination="cEG-wl-Dcr" kind="relationship" relationship="viewControllers" id="7A8-Vh-oQv"/>
+                        <segue destination="2di-YO-aII" kind="relationship" relationship="viewControllers" id="0xd-Pk-Iop"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ri3-gy-wOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-431"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Wnx-08-bru">
+            <objects>
+                <viewController id="eal-UT-FNW" customClass="FeedViewController" customModule="BerryBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GDC-0e-Og6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="705"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vLQ-aP-OBV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Fz1-qy-92c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6W-Fh-glk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="-564"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="4FF-V9-gr6">
+            <objects>
+                <viewController id="cEG-wl-Dcr" customClass="SearchViewController" customModule="BerryBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QSc-A8-ljd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="705"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2PK-9u-3fr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Vid-X1-0wk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnI-ZV-5UT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="33"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="aP1-gt-4HB">
+            <objects>
+                <viewController id="2di-YO-aII" customClass="MoreViewController" customModule="BerryBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9aV-1t-TKE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="705"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="STq-3q-TY4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="5HW-M3-j7a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDl-6w-W9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="619"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
