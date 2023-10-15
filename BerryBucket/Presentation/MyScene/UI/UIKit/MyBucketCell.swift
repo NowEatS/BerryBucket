@@ -26,6 +26,10 @@ class MyBucketCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(bucket: Bucket) {
+        
+    }
+    
     private func setupViews() {
         self.backgroundColor = BerryBucketColor.gray2
         let configuration = UIHostingConfiguration {
