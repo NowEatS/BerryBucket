@@ -14,6 +14,7 @@ struct CheckButtonView: View {
     @State private var innerTrimEnd: CGFloat = 0
     @State private var alpha = 0.0
     @State private var strokeColor: Color = Color(uiColor: BerryBucketColor.main2)
+    @State private var isEnableToTap: Bool = true
     
     private var action: (() -> Void)? = nil
     
@@ -36,6 +37,12 @@ struct CheckButtonView: View {
         }
         .frame(width: 32, height: 32)
         .onTapGesture {
+            if !isEnableToTap {
+                return
+            }
+            
+            isEnableToTap = false
+            
             outerTrimEnd = 0
             innerTrimEnd = 0
             alpha = 1.0
@@ -68,6 +75,8 @@ struct CheckButtonView: View {
             .delay(1.5*animationDuration)
         ) {
             alpha = 0.0
+        } completion: {
+            isEnableToTap = true
         }
     }
 }

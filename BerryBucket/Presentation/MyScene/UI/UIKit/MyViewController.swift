@@ -31,6 +31,8 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
 //        tableView.backgroundColor = BerryBucketColor.gray2
         tableView.sectionHeaderTopPadding = 0
         tableView.register(MyBucketCell.self, forCellReuseIdentifier: "MyBucketCell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
     }
      
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,7 +40,7 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 1 ? 10 : 0
+        return section == 1 ? bucketData.count : 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -54,7 +56,14 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyBucketCell", for: indexPath) as! MyBucketCell
-        
+        cell.setData(bucket: bucketData[indexPath.row])
         return cell
     }
 }
+
+let bucketData = [
+    Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 10, userCount: 0, goalCount: 1),
+    Bucket(id: 0, title: "스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: -20, userCount: 0, goalCount: 1),
+    Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 0, goalCount: 1),
+    Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 1, goalCount: 3),
+]

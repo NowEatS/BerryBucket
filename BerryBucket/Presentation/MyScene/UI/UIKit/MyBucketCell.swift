@@ -13,7 +13,7 @@ class MyBucketCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupViews()
+//        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -27,13 +27,13 @@ class MyBucketCell: UITableViewCell {
     }
     
     func setData(bucket: Bucket) {
-        
+        setupViews(bucket: bucket)
     }
     
-    private func setupViews() {
+    private func setupViews(bucket: Bucket) {
         self.backgroundColor = BerryBucketColor.gray2
         let configuration = UIHostingConfiguration {
-            MyBucketCellView()
+            MyBucketCellView(bucketTitle: bucket.title, bucketDday: bucket.dDay, goalCount: bucket.goalCount, userCount: bucket.userCount)
         }
         self.contentConfiguration = configuration
     }
