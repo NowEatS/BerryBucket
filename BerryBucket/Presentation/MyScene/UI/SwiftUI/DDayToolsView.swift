@@ -61,7 +61,7 @@ struct DDayToolsView: View {
             })
             
         }
-        .frame(height: 48)
+        .frame(height: 64)
         .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
         .background(Color(uiColor: BerryBucketColor.gray2))
     }
