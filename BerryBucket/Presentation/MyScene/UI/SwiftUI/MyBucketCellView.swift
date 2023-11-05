@@ -12,19 +12,16 @@ struct MyBucketCellView: View {
     var bucketDday: Int = -9
     var goalCount: Int = 1
     @State var userCount: Int = 0
+    @State var showDday: Bool = true
     
+    // Private
     @State private var progress: Double = 0.0
-    
     @State private var needToPlayAnimation: Bool = false
-    
     @State private var cellBorderColor: Color = Color(uiColor: BerryBucketColor.main2)
     @State private var cellBorderWidth: CGFloat = 0
-    
     @State private var isRepeatBucket: Bool = false
     @State private var isComplete: Bool = false
     @State private var completeStateFirst: Bool = false
-    
-    @State var showDday: Bool = true
     
     private var isOverDate: Bool { bucketDday > 0 }
     
@@ -105,7 +102,7 @@ struct MyBucketCellView: View {
                                 // 딤드 애니메이션 시작
                                 withAnimation(.easeInOut) {
 //                                    cellBorderColor = Color(uiColor: BerryBucketColor.main2)
-                                    cellBorderWidth = 1
+                                    cellBorderWidth = 2
                                 } completion: {
                                     withAnimation(.easeInOut) {
                                         cellBorderWidth = 0
@@ -163,6 +160,6 @@ struct MyBucketCellView: View {
     }
 }
 
-#Preview {
-    MyBucketCellView().previewLayout(.fixed(width: .infinity, height: 74))
-}
+//#Preview {
+//    MyBucketCellView().previewLayout(.fixed(width: .infinity, height: 74))
+//}

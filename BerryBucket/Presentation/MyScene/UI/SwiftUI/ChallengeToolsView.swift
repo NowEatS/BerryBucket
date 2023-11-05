@@ -1,38 +1,33 @@
 //
-//  TotalBucketToolsView.swift
+//  ChallengeToolsView.swift
 //  BerryBucket
 //
-//  Created by 태원 on 9/2/23.
+//  Created by 태원 on 11/6/23.
 //
 
 import SwiftUI
 
-struct TotalBucketToolsView: View {
-    var buckets: [Bucket] = []
-    private var progressBuckets: [Bucket] {
-        return buckets.filter {$0.userCount < $0.goalCount}
-    }
+struct ChallengeToolsView: View {
     
-    private var completedBuckets: [Bucket] {
-        return buckets.filter {$0.userCount == $0.goalCount}
-    }
-    
+    var challangeBuckets: [Bucket] = []
     var body: some View {
-        
         HStack(spacing: 0) {
-            Text("진행 중  \(progressBuckets.count)")
-                .font(.system(size: 13))
-                .foregroundStyle(Color(uiColor: BerryBucketColor.gray8))
             
-            Color(uiColor: BerryBucketColor.gray6)
-                .frame(width: 1, height: 10)
-                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
-            
-            Text("완료 \(completedBuckets.count)")
+            Text("챌린지 \(challangeBuckets.count)개 진행 중. ")
                 .font(.system(size: 13))
-                .foregroundStyle(Color(uiColor: BerryBucketColor.gray8))
+                .foregroundColor(Color(uiColor: BerryBucketColor.main3))
+            
+            Text(" 화이팅! ")
+                .font(.system(size: 13))
+                .foregroundColor(Color(uiColor: BerryBucketColor.gray8))
+            
+            Text("🙌")
+                .font(.system(size: 20))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
             
             Spacer()
+            
+            
             
             Button(action: {
                 print("didTapFilterButton")
@@ -43,7 +38,7 @@ struct TotalBucketToolsView: View {
             Color(uiColor: BerryBucketColor.gray4)
                 .frame(width: 1, height: 16)
                 .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
-        
+            
             Button(action: {
                 print("didTapSortButton")
             }, label: {
@@ -58,5 +53,5 @@ struct TotalBucketToolsView: View {
 }
 
 #Preview {
-    TotalBucketToolsView()
+    ChallengeToolsView()
 }

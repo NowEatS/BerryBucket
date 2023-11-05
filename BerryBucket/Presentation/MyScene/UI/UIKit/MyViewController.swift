@@ -7,13 +7,15 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class MyViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 //    @IBOutlet weak var bucketTabBarView: UIView!
 //    @IBOutlet weak var totalBucketListView: TotalBucketlistView!
-    
+
+    private var viewModel: MyBucketTabViewModel = MyBucketTabViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +25,27 @@ class MyViewController: UIViewController {
         print("MyVC is Loaded")
         
         setUpTableView()
+        
+        viewModel.onCellDataUpdated = { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 }
 
 extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     func setUpTableView() {
-//        tableView.backgroundColor = BerryBucketColor.gray2
+        tableView.backgroundColor = BerryBucketColor.gray2
         tableView.sectionHeaderTopPadding = 0
         tableView.register(MyBucketCell.self, forCellReuseIdentifier: "MyBucketCell")
+        tableView.register(MyCategoryCell.self, forCellReuseIdentifier: "MyCategoryCell")
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
+        
+        viewModel.fetchData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.contentOffset.y = scrollView.contentOffset.y < 0 ? 0 : scrollView.contentOffset.y
     }
      
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +53,15 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 1 ? bucketData.count : 0
+        if section == 1 {
+            switch viewModel.selectedTabIndex {
+            case .all, .dday, .challange:
+                return viewModel.buckets.count
+            case .category:
+                return viewModel.categories.count
+            }
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -48,22 +69,25 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
             let vc = UIHostingController(rootView: MyProfileView())
             return vc.view
         } else if section == 1 {
-            let vc = UIHostingController(rootView: MyBucketTabView())
+            let vc = UIHostingController(rootView: MyBucketTabView(viewModel: viewModel))
             return vc.view
         }
         return nil
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyBucketCell", for: indexPath) as! MyBucketCell
-        cell.setData(bucket: bucketData[indexPath.row])
-        return cell
+        switch viewModel.selectedTabIndex {
+        case .all, .dday:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyBucketCell", for: indexPath) as! MyBucketCell
+            cell.setData(bucket: viewModel.buckets[indexPath.row], showDday: viewModel.selectedTabIndex == .dday)
+            return cell
+        case .category:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCategoryCell", for: indexPath) as! MyCategoryCell
+            cell.setData(category: viewModel.categories[indexPath.row])
+            
+            return cell
+        case .challange:
+            return UITableViewCell()
+        }
     }
 }
-
-let bucketData = [
-    Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 10, userCount: 0, goalCount: 1),
-    Bucket(id: 0, title: "스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: -20, userCount: 0, goalCount: 1),
-    Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 0, goalCount: 1),
-    Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 1, goalCount: 3),
-]

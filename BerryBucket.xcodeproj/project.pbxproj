@@ -20,6 +20,11 @@
 		7B4776A52A3B503200ECED39 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4776A42A3B503200ECED39 /* FeedViewController.swift */; };
 		7B4776A72A3B503A00ECED39 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4776A62A3B503A00ECED39 /* SearchViewController.swift */; };
 		7B4776A92A3B504100ECED39 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4776A82A3B504100ECED39 /* MoreViewController.swift */; };
+		7B55F08F2AF7FBC90058121B /* MyCategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55F08E2AF7FBC90058121B /* MyCategoryCellView.swift */; };
+		7B55F0912AF800A30058121B /* MyCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55F0902AF800A30058121B /* MyCategoryCell.swift */; };
+		7B55F0932AF802380058121B /* CategoryToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55F0922AF802380058121B /* CategoryToolsView.swift */; };
+		7B5BF4732AF7D99000318718 /* MyBucketTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5BF4722AF7D99000318718 /* MyBucketTabViewModel.swift */; };
+		7B5BF4752AF7DD6500318718 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5BF4742AF7DD6500318718 /* CategoryEntity.swift */; };
 		7B81ACD52A39FF4B0092C78B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81ACD42A39FF4B0092C78B /* AppDelegate.swift */; };
 		7B81ACD72A39FF4B0092C78B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81ACD62A39FF4B0092C78B /* SceneDelegate.swift */; };
 		7B81ACD92A39FF4B0092C78B /* BBRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81ACD82A39FF4B0092C78B /* BBRootViewController.swift */; };
@@ -30,6 +35,8 @@
 		7B8D66D82A9BA6DB00C0E46C /* MyBucketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D66D72A9BA6DB00C0E46C /* MyBucketCell.swift */; };
 		7B8D66DA2A9BA82900C0E46C /* MyBucketCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D66D92A9BA82900C0E46C /* MyBucketCellView.swift */; };
 		7BA746152AA4C5F800FF3962 /* CheckButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA746142AA4C5F800FF3962 /* CheckButtonView.swift */; };
+		7BC1E5742AF80F220012EA52 /* DDayToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC1E5732AF80F220012EA52 /* DDayToolsView.swift */; };
+		7BC1E5762AF814AA0012EA52 /* ChallengeToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC1E5752AF814AA0012EA52 /* ChallengeToolsView.swift */; };
 		7BCC5C952ADC4D4E00236046 /* UserProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCC5C942ADC4D4E00236046 /* UserProfileEntity.swift */; };
 		7BD3DDE92AA23A34004981AF /* MyBucketTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3DDE82AA23A34004981AF /* MyBucketTabView.swift */; };
 		7BD3DDEB2AA241DF004981AF /* TotalBucketToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3DDEA2AA241DF004981AF /* TotalBucketToolsView.swift */; };
@@ -51,6 +58,11 @@
 		7B4776A42A3B503200ECED39 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7B4776A62A3B503A00ECED39 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7B4776A82A3B504100ECED39 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		7B55F08E2AF7FBC90058121B /* MyCategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCategoryCellView.swift; sourceTree = "<group>"; };
+		7B55F0902AF800A30058121B /* MyCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCategoryCell.swift; sourceTree = "<group>"; };
+		7B55F0922AF802380058121B /* CategoryToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryToolsView.swift; sourceTree = "<group>"; };
+		7B5BF4722AF7D99000318718 /* MyBucketTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketTabViewModel.swift; sourceTree = "<group>"; };
+		7B5BF4742AF7DD6500318718 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 		7B81ACD12A39FF4A0092C78B /* BerryBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerryBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B81ACD42A39FF4B0092C78B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B81ACD62A39FF4B0092C78B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +75,8 @@
 		7B8D66D72A9BA6DB00C0E46C /* MyBucketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketCell.swift; sourceTree = "<group>"; };
 		7B8D66D92A9BA82900C0E46C /* MyBucketCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketCellView.swift; sourceTree = "<group>"; };
 		7BA746142AA4C5F800FF3962 /* CheckButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButtonView.swift; sourceTree = "<group>"; };
+		7BC1E5732AF80F220012EA52 /* DDayToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayToolsView.swift; sourceTree = "<group>"; };
+		7BC1E5752AF814AA0012EA52 /* ChallengeToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeToolsView.swift; sourceTree = "<group>"; };
 		7BCC5C942ADC4D4E00236046 /* UserProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileEntity.swift; sourceTree = "<group>"; };
 		7BD3DDE82AA23A34004981AF /* MyBucketTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketTabView.swift; sourceTree = "<group>"; };
 		7BD3DDEA2AA241DF004981AF /* TotalBucketToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBucketToolsView.swift; sourceTree = "<group>"; };
@@ -199,6 +213,7 @@
 		7B1BB27E2A5176030005C5E4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				7B5BF4722AF7D99000318718 /* MyBucketTabViewModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -208,6 +223,7 @@
 			children = (
 				7B1BB2872A517D4D0005C5E4 /* BucketListsEntity.swift */,
 				7BCC5C942ADC4D4E00236046 /* UserProfileEntity.swift */,
+				7B5BF4742AF7DD6500318718 /* CategoryEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -341,6 +357,7 @@
 				7B4776A22A3B4CB000ECED39 /* MyViewController.swift */,
 				7B1BB2892A5181AE0005C5E4 /* MyViewController.storyboard */,
 				7B8D66D72A9BA6DB00C0E46C /* MyBucketCell.swift */,
+				7B55F0902AF800A30058121B /* MyCategoryCell.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -401,6 +418,10 @@
 				7BD3DDEA2AA241DF004981AF /* TotalBucketToolsView.swift */,
 				7BD3DDEC2AA24561004981AF /* MyProfileView.swift */,
 				7BA746142AA4C5F800FF3962 /* CheckButtonView.swift */,
+				7B55F08E2AF7FBC90058121B /* MyCategoryCellView.swift */,
+				7B55F0922AF802380058121B /* CategoryToolsView.swift */,
+				7BC1E5732AF80F220012EA52 /* DDayToolsView.swift */,
+				7BC1E5752AF814AA0012EA52 /* ChallengeToolsView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -480,11 +501,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC1E5742AF80F220012EA52 /* DDayToolsView.swift in Sources */,
 				7B8D66DA2A9BA82900C0E46C /* MyBucketCellView.swift in Sources */,
 				7B37412D2A3A18D50077062B /* BBHomeTabBarController.swift in Sources */,
+				7B5BF4752AF7DD6500318718 /* CategoryEntity.swift in Sources */,
 				7B3741302A3A1B460077062B /* BBHomeTabBarView.swift in Sources */,
 				7BD3DDE92AA23A34004981AF /* MyBucketTabView.swift in Sources */,
 				7B8D66D82A9BA6DB00C0E46C /* MyBucketCell.swift in Sources */,
+				7B55F0912AF800A30058121B /* MyCategoryCell.swift in Sources */,
 				7B3741352A3A1CB70077062B /* BerryBucketColors.swift in Sources */,
 				7BD3DDEB2AA241DF004981AF /* TotalBucketToolsView.swift in Sources */,
 				7BA746152AA4C5F800FF3962 /* CheckButtonView.swift in Sources */,
@@ -492,14 +516,18 @@
 				7B4776A72A3B503A00ECED39 /* SearchViewController.swift in Sources */,
 				7BD8FEDD2AE15B1900A62A1C /* View+Extensions.swift in Sources */,
 				7B1BB2882A517D4D0005C5E4 /* BucketListsEntity.swift in Sources */,
+				7B55F0932AF802380058121B /* CategoryToolsView.swift in Sources */,
 				7BD3DDED2AA24561004981AF /* MyProfileView.swift in Sources */,
 				7BCC5C952ADC4D4E00236046 /* UserProfileEntity.swift in Sources */,
 				7B4776A32A3B4CB000ECED39 /* MyViewController.swift in Sources */,
 				7B4776A92A3B504100ECED39 /* MoreViewController.swift in Sources */,
+				7B5BF4732AF7D99000318718 /* MyBucketTabViewModel.swift in Sources */,
+				7B55F08F2AF7FBC90058121B /* MyCategoryCellView.swift in Sources */,
 				7B81ACD92A39FF4B0092C78B /* BBRootViewController.swift in Sources */,
 				7B81ACD52A39FF4B0092C78B /* AppDelegate.swift in Sources */,
 				7B4776A52A3B503200ECED39 /* FeedViewController.swift in Sources */,
 				7B1BB2842A51791E0005C5E4 /* TabBarViewModel.swift in Sources */,
+				7BC1E5762AF814AA0012EA52 /* ChallengeToolsView.swift in Sources */,
 				7B81ACD72A39FF4B0092C78B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
