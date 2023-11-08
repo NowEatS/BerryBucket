@@ -68,21 +68,21 @@ struct MyProfileView: View {
             
             Text("게으른 개발자")
                 .frame(height: 22)
-                .font(.system(size: 15))
+                .font(.notoSansKR(.regular, size: 15))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.main3))
             
             Spacer().frame(height: 4)
             
             Text("태원")
                 .frame(height: 22)
-                .font(.system(size: 18, weight: .bold))
+                .font(.notoSansKR(.bold, size: 18))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray10))
             
             Spacer().frame(height: 8)
             
             Text("ㅎㅇㄹ 저는 인프피 / 뭐?")
                 .frame(height: 22)
-                .font(.system(size: 13))
+                .font(.notoSansKR(.regular, size: 13))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray6))
             
             Spacer().frame(height: 24)
@@ -93,24 +93,24 @@ struct MyProfileView: View {
                 VStack(spacing: 0) {
                     Text("300")
                         .frame(height: 30)
-                        .font(.system(size: 20))
+                        .font(.notoSansKR(.medium, size: 20))
                         .foregroundStyle(Color(uiColor: BerryBucketColor.gray10))
                     
                     Text("팔로워")
                         .frame(height: 20)
-                        .font(.system(size: 14))
+                        .font(.notoSansKR(.regular, size: 14))
                         .foregroundStyle(Color(uiColor: BerryBucketColor.gray7))
                 }
                 Spacer()
                 VStack(spacing: 0) {
                     Text("120")
                         .frame(height: 30)
-                        .font(.system(size: 20))
+                        .font(.notoSansKR(.medium, size: 20))
                         .foregroundStyle(Color(uiColor: BerryBucketColor.gray10))
                     
                     Text("팔로잉")
                         .frame(height: 20)
-                        .font(.system(size: 14))
+                        .font(.notoSansKR(.regular, size: 14))
                         .foregroundStyle(Color(uiColor: BerryBucketColor.gray7))
                 }
                 Spacer()

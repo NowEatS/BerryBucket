@@ -21,7 +21,7 @@ struct TotalBucketToolsView: View {
         
         HStack(spacing: 0) {
             Text("진행 중  \(progressBuckets.count)")
-                .font(.system(size: 13))
+                .font(.notoSansKR(.regular, size: 13))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray8))
             
             Color(uiColor: BerryBucketColor.gray6)
@@ -29,7 +29,7 @@ struct TotalBucketToolsView: View {
                 .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
             
             Text("완료 \(completedBuckets.count)")
-                .font(.system(size: 13))
+                .font(.notoSansKR(.regular, size: 13))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray8))
             
             Spacer()

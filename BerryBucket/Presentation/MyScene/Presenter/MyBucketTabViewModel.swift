@@ -61,6 +61,7 @@ class MyBucketTabViewModel: ObservableObject {
         return [
             Bucket(id: 0, title: "기본 버킷이다", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 10, userCount: 0, goalCount: 1),
             Bucket(id: 0, title: "기본 버킷이다기본 버킷이다기본 버킷이다기본 버킷이다기본 버킷이다기본 버킷이다기본 버킷이다", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: -20, userCount: 0, goalCount: 1),
+            Bucket(id: 0, title: "기본 버킷이다 기본 버킷이다 기본 버킷이다 기본 버킷이다 기본 버킷이다 기본 버킷이다 기본 버킷이다", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: -20, userCount: 0, goalCount: 1),
             Bucket(id: 0, title: "무슨 버킷이냐", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 0, goalCount: 1),
             Bucket(id: 0, title: "횟수 버킷이다", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 1, goalCount: 3),
             
@@ -83,7 +84,7 @@ class MyBucketTabViewModel: ObservableObject {
     private func fetchDDay() -> [Bucket] {
         return [
             Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 10, userCount: 0, goalCount: 1),
-            Bucket(id: 0, title: "스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: -20, userCount: 0, goalCount: 1),
+            Bucket(id: 0, title: "스위스 여행가자 스위스 여행가자 스위스 여행가자 스위스 여행가자 스위스 여행가자 스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: -20, userCount: 0, goalCount: 1),
             Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 0, goalCount: 1),
             Bucket(id: 0, title: "스위스 여행가자", bucketType: "NORMAL", exposureStatus: "PUBLIC", status: 0, dDay: 0, userCount: 1, goalCount: 3),
         ]

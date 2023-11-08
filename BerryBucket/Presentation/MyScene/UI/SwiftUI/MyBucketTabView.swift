@@ -11,7 +11,7 @@ struct MyBucketTabView: View {
     @ObservedObject var viewModel: MyBucketTabViewModel
     
     private var tabIndicatorLeadingPadding: CGFloat {
-        let padding: [CGFloat] = [26, 77, 158, 223]
+        let padding: [CGFloat] = [24, 73, 149, 212]
         return padding[viewModel.selectedTabIndex.rawValue]
     }
     private var tabIndicatorWidth: CGFloat {
@@ -38,7 +38,7 @@ struct MyBucketTabView: View {
                 } label: {
                     Text("전체")
                         .foregroundStyle(Color(viewModel.selectedTabIndex == .all ? BerryBucketColor.gray10 : BerryBucketColor.gray6))
-                        .font(.system(size: 16, weight: .bold))
+                        .font(.notoSansKR(.bold, size: 16))
                 }
                 .padding(EdgeInsets(top: 0, leading: 28, bottom: 0, trailing: 0))
                 
@@ -50,7 +50,7 @@ struct MyBucketTabView: View {
                 } label: {
                     Text("카테고리")
                         .foregroundStyle(Color(viewModel.selectedTabIndex == .category ? BerryBucketColor.gray10 : BerryBucketColor.gray6))
-                        .font(.system(size: 16, weight: .bold))
+                        .font(.notoSansKR(.bold, size: 16))
                 }
                 .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 0))
                 
@@ -62,7 +62,7 @@ struct MyBucketTabView: View {
                 } label: {
                     Text("디데이")
                         .foregroundStyle(Color(viewModel.selectedTabIndex == .dday ? BerryBucketColor.gray10 : BerryBucketColor.gray6))
-                        .font(.system(size: 16, weight: .bold))
+                        .font(.notoSansKR(.bold, size: 16))
                 }
                 .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 0))
                 
@@ -74,7 +74,7 @@ struct MyBucketTabView: View {
                 } label: {
                     Text("챌린지")
                         .foregroundStyle(Color(viewModel.selectedTabIndex == .challange ? BerryBucketColor.gray10 : BerryBucketColor.gray6))
-                        .font(.system(size: 16, weight: .bold))
+                        .font(.notoSansKR(.bold, size: 16))
                 }
                 .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 0))
                 

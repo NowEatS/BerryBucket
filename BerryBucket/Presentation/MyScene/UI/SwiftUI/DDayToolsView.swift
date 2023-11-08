@@ -19,15 +19,15 @@ struct DDayToolsView: View {
             
             if overDateBuckets.count > 0 {
                 Text("지난 디데이가 ")
-                    .font(.system(size: 13))
+                    .font(.notoSansKR(.regular, size: 13))
                     .foregroundColor(Color(uiColor: BerryBucketColor.gray8))
                 
                 Text("\(overDateBuckets.count)개 ")
-                    .font(.system(size: 13))
+                    .font(.notoSansKR(.regular, size: 13))
                     .foregroundColor(Color(uiColor: BerryBucketColor.error2))
                 
                 Text("있어요!")
-                    .font(.system(size: 13))
+                    .font(.notoSansKR(.regular, size: 13))
                     .foregroundColor(Color(uiColor: BerryBucketColor.gray8))
                 
             } else {
@@ -35,7 +35,7 @@ struct DDayToolsView: View {
                     print("didTapMakeReminderButton")
                 }, label: {
                     Text("디데이 알림 설정하기")
-                        .font(.system(size: 13))
+                        .font(.notoSansKR(.regular, size: 13))
                         .foregroundColor(Color(uiColor: BerryBucketColor.subD4))
                 })
             }

@@ -32,6 +32,10 @@ struct MyBucketCellView: View {
         return isRepeatBucket ? 18 : 22
     }
     
+    private var titleTrailingPadding: CGFloat {
+        return !isComplete && !completeStateFirst ? 0 : 16
+    }
+    
     private var cellHeight: CGFloat {
         if showDday {
             // 디데이 표시 높이
@@ -50,7 +54,7 @@ struct MyBucketCellView: View {
     }
     
     private var stringForDDayText: String {
-        return bucketDday == 0 ? "D-Day" : isOverDate ? "D+\(bucketDday)" : "D\(bucketDday)"
+        return bucketDday == 0 ? "D-DAY" : isOverDate ? "D+\(bucketDday)" : "D\(bucketDday)"
     }
     
     var body: some View {
@@ -59,7 +63,7 @@ struct MyBucketCellView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     // 타이틀
                     Text(bucketTitle)
-                        .font(.system(size: 14))
+                        .font(.notoSansKR(.regular, size: 14))
                         .foregroundStyle(Color(uiColor: isComplete || completeStateFirst ? BerryBucketColor.gray6 : BerryBucketColor.gray9))
                         .lineLimit(showDday || isRepeatBucket ? 1: 2)
                         .lineSpacing(8.0)
@@ -74,10 +78,10 @@ struct MyBucketCellView: View {
                                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12))
                             
                             Text("\(userCount)")
-                                .font(.system(size: 13))
+                                .font(.notoSansKR(.medium, size: 13))
                                 .foregroundStyle(Color(uiColor: showDday ? (isOverDate ? BerryBucketColor.gray6: BerryBucketColor.subD2) : BerryBucketColor.main2))
                             Text("/\(goalCount)")
-                                .font(.system(size: 13))
+                                .font(.notoSansKR(.medium, size: 13))
                                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray4))
                         }
                         .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
@@ -86,7 +90,7 @@ struct MyBucketCellView: View {
                         }
                     }
                 }
-                .padding(EdgeInsets(top: titleTopPadding, leading: 16, bottom: titleBottomPadding, trailing: 0))
+                .padding(EdgeInsets(top: titleTopPadding, leading: 16, bottom: titleBottomPadding, trailing: titleTrailingPadding))
                 
                 Spacer(minLength: 0)
                 
@@ -119,7 +123,7 @@ struct MyBucketCellView: View {
                         }
                     })
                     .frame(width: 32, height: 32)
-                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
                 }
             }
             .frame(minHeight: cellHeight)
@@ -136,7 +140,7 @@ struct MyBucketCellView: View {
                         
                         // D-Day Text
                         Text(stringForDDayText)
-                            .font(.system(size: 12, weight: .bold))
+                            .font(.notoSansKR(.bold, size: 12))
                             .foregroundStyle(Color(uiColor: BerryBucketColor.gray1))
                             .frame(height: 22)
                             .padding(EdgeInsets(top: 3, leading: 8, bottom: 3, trailing: 8))

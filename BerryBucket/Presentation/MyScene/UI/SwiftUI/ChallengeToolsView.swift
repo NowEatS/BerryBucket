@@ -14,15 +14,15 @@ struct ChallengeToolsView: View {
         HStack(spacing: 0) {
             
             Text("챌린지 \(challangeBuckets.count)개 진행 중. ")
-                .font(.system(size: 13))
+                .font(.notoSansKR(.regular, size: 13))
                 .foregroundColor(Color(uiColor: BerryBucketColor.main3))
             
             Text(" 화이팅! ")
-                .font(.system(size: 13))
+                .font(.notoSansKR(.regular, size: 13))
                 .foregroundColor(Color(uiColor: BerryBucketColor.gray8))
             
             Text("🙌")
-                .font(.system(size: 20))
+                .font(.notoSansKR(.regular, size: 20))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0))
             
             Spacer()

@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>notosans_kr_black.otf</string>
+		<string>notosans_kr_bold.otf</string>
+		<string>notosans_kr_light.otf</string>
+		<string>notosans_kr_medium.otf</string>
+		<string>notosans_kr_regular.otf</string>
+		<string>notosans_kr_thin.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -14,14 +14,14 @@ struct CategoryToolsView: View {
         
         HStack(spacing: 0) {
             Text("추천 카테고리")
-                .font(.system(size: 13))
+                .font(.notoSansKR(.regular, size: 13))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray8))
             
             Spacer().frame(width:8)
             
             ForEach(recommendedCategories, id: \.self) { category in
                 Text("#"+category.title)
-                    .font(.system(size: 13))
+                    .font(.notoSansKR(.regular, size: 13))
                     .foregroundStyle(Color(uiColor: BerryBucketColor.main4))
             }
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
@@ -32,7 +32,7 @@ struct CategoryToolsView: View {
                 print("didTapEditButton")
             }, label: {
                 Text("편집")
-                    .font(.system(size: 16))
+                    .font(.notoSansKR(.regular, size: 16))
                     .foregroundStyle(Color(uiColor: BerryBucketColor.gray9))
             })
             

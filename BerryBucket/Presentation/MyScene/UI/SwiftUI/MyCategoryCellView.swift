@@ -15,7 +15,7 @@ struct MyCategoryCellView: View {
         HStack() {
             // 카테고리 타이틀
             Text(categoryTitle)
-                .font(.system(size: 14))
+                .font(.notoSansKR(.medium, size: 14))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray10))
                 .lineLimit(1)
                 .padding(EdgeInsets(top: 22, leading: 16, bottom: 22, trailing: 12))
@@ -23,7 +23,7 @@ struct MyCategoryCellView: View {
             Spacer()
             
             Text("\(bucketCount)")
-                .font(.system(size: 14))
+                .font(.notoSansKR(.medium, size: 14))
                 .foregroundStyle(Color(uiColor: BerryBucketColor.gray7))
                 .lineLimit(1)
                 .padding(EdgeInsets(top: 22, leading: 0, bottom: 22, trailing: 20))

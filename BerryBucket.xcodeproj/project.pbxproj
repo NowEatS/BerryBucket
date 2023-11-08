@@ -23,6 +23,13 @@
 		7B55F08F2AF7FBC90058121B /* MyCategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55F08E2AF7FBC90058121B /* MyCategoryCellView.swift */; };
 		7B55F0912AF800A30058121B /* MyCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55F0902AF800A30058121B /* MyCategoryCell.swift */; };
 		7B55F0932AF802380058121B /* CategoryToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55F0922AF802380058121B /* CategoryToolsView.swift */; };
+		7B5847962AFBD9020049F75F /* notosans_kr_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5847902AFBD9010049F75F /* notosans_kr_bold.otf */; };
+		7B5847972AFBD9020049F75F /* notosans_kr_medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5847912AFBD9010049F75F /* notosans_kr_medium.otf */; };
+		7B5847982AFBD9020049F75F /* notosans_kr_thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5847922AFBD9010049F75F /* notosans_kr_thin.otf */; };
+		7B5847992AFBD9020049F75F /* notosans_kr_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5847932AFBD9010049F75F /* notosans_kr_light.otf */; };
+		7B58479A2AFBD9020049F75F /* notosans_kr_black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5847942AFBD9020049F75F /* notosans_kr_black.otf */; };
+		7B58479B2AFBD9020049F75F /* notosans_kr_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5847952AFBD9020049F75F /* notosans_kr_regular.otf */; };
+		7B58479D2AFBDA330049F75F /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58479C2AFBDA330049F75F /* Font+Extensions.swift */; };
 		7B5BF4732AF7D99000318718 /* MyBucketTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5BF4722AF7D99000318718 /* MyBucketTabViewModel.swift */; };
 		7B5BF4752AF7DD6500318718 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5BF4742AF7DD6500318718 /* CategoryEntity.swift */; };
 		7B81ACD52A39FF4B0092C78B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81ACD42A39FF4B0092C78B /* AppDelegate.swift */; };
@@ -61,6 +68,13 @@
 		7B55F08E2AF7FBC90058121B /* MyCategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCategoryCellView.swift; sourceTree = "<group>"; };
 		7B55F0902AF800A30058121B /* MyCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCategoryCell.swift; sourceTree = "<group>"; };
 		7B55F0922AF802380058121B /* CategoryToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryToolsView.swift; sourceTree = "<group>"; };
+		7B5847902AFBD9010049F75F /* notosans_kr_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notosans_kr_bold.otf; sourceTree = "<group>"; };
+		7B5847912AFBD9010049F75F /* notosans_kr_medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notosans_kr_medium.otf; sourceTree = "<group>"; };
+		7B5847922AFBD9010049F75F /* notosans_kr_thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notosans_kr_thin.otf; sourceTree = "<group>"; };
+		7B5847932AFBD9010049F75F /* notosans_kr_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notosans_kr_light.otf; sourceTree = "<group>"; };
+		7B5847942AFBD9020049F75F /* notosans_kr_black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notosans_kr_black.otf; sourceTree = "<group>"; };
+		7B5847952AFBD9020049F75F /* notosans_kr_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notosans_kr_regular.otf; sourceTree = "<group>"; };
+		7B58479C2AFBDA330049F75F /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		7B5BF4722AF7D99000318718 /* MyBucketTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketTabViewModel.swift; sourceTree = "<group>"; };
 		7B5BF4742AF7DD6500318718 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 		7B81ACD12A39FF4A0092C78B /* BerryBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerryBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,6 +332,19 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		7B5847832AFBD8C20049F75F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7B5847942AFBD9020049F75F /* notosans_kr_black.otf */,
+				7B5847902AFBD9010049F75F /* notosans_kr_bold.otf */,
+				7B5847932AFBD9010049F75F /* notosans_kr_light.otf */,
+				7B5847912AFBD9010049F75F /* notosans_kr_medium.otf */,
+				7B5847952AFBD9020049F75F /* notosans_kr_regular.otf */,
+				7B5847922AFBD9010049F75F /* notosans_kr_thin.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		7B81ACC82A39FF4A0092C78B = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +411,7 @@
 			children = (
 				7B8D66D02A927C5D00C0E46C /* UIColor+Extensions.swift */,
 				7BD8FEDC2AE15B1900A62A1C /* View+Extensions.swift */,
+				7B58479C2AFBDA330049F75F /* Font+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,6 +434,7 @@
 		7B8D66CF2A927C4100C0E46C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7B5847832AFBD8C20049F75F /* Font */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -485,11 +514,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B81ACE12A39FF4C0092C78B /* LaunchScreen.storyboard in Resources */,
+				7B58479A2AFBD9020049F75F /* notosans_kr_black.otf in Resources */,
+				7B58479B2AFBD9020049F75F /* notosans_kr_regular.otf in Resources */,
 				7B1BB2952A5184680005C5E4 /* FeedViewController.storyboard in Resources */,
+				7B5847982AFBD9020049F75F /* notosans_kr_thin.otf in Resources */,
 				7B1BB2912A51843B0005C5E4 /* MoreViewController.storyboard in Resources */,
+				7B5847992AFBD9020049F75F /* notosans_kr_light.otf in Resources */,
 				7B81ACDE2A39FF4C0092C78B /* Assets.xcassets in Resources */,
+				7B5847962AFBD9020049F75F /* notosans_kr_bold.otf in Resources */,
 				7B81ACDC2A39FF4B0092C78B /* Main.storyboard in Resources */,
 				7B1BB28A2A5181AE0005C5E4 /* MyViewController.storyboard in Resources */,
+				7B5847972AFBD9020049F75F /* notosans_kr_medium.otf in Resources */,
 				7B1BB2932A5184510005C5E4 /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +541,7 @@
 				7B37412D2A3A18D50077062B /* BBHomeTabBarController.swift in Sources */,
 				7B5BF4752AF7DD6500318718 /* CategoryEntity.swift in Sources */,
 				7B3741302A3A1B460077062B /* BBHomeTabBarView.swift in Sources */,
+				7B58479D2AFBDA330049F75F /* Font+Extensions.swift in Sources */,
 				7BD3DDE92AA23A34004981AF /* MyBucketTabView.swift in Sources */,
 				7B8D66D82A9BA6DB00C0E46C /* MyBucketCell.swift in Sources */,
 				7B55F0912AF800A30058121B /* MyCategoryCell.swift in Sources */,
